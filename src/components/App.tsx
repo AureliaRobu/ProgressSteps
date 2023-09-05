@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ProgressBar from './ProgressBar';
+import Button from './Button';
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -21,12 +22,12 @@ function App() {
     <div className="App">
       <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
       <div className="flex justify-between">
-        <button onClick={prevStep} disabled={currentStep === 1}>
+        <Button onClick={prevStep} disabled={currentStep === 1}>
           Previous
-        </button>
-        <button onClick={nextStep} disabled={currentStep === totalSteps}>
+        </Button>
+        <Button onClick={nextStep} disabled={currentStep === totalSteps}>
           Next
-        </button>
+        </Button>
       </div>
     </div>
   );
